@@ -118,7 +118,7 @@ app.post("/", async (req, res) => {
       const caption =
         "*👆 Here Is Your Generated Image\n\n💭 Your Prompt:*\n`" +
         msg.text +
-        "`\n\n*🧑‍💻 Created By:* [BOTNAME](https://telegram.dog/Anime_image_generator_bot)";
+        "`\n\n*🧑‍💻 Created By:* [Diablo](https://telegram.dog/Anime_image_generator_bot)";
       const keyboard = {
         reply_markup: {
           inline_keyboard: [

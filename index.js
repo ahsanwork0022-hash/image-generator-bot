@@ -3,15 +3,15 @@ const axios = require("axios");
 const TelegramBot = require("node-telegram-bot-api");
 const fetch = require("node-fetch");
 
-const token = "BOT_TOKEN";
-const admin = "USERID";
-const DATABASE_URL = "DATABASE_URL"; 
-const WEBHOOK_URL = "VERCEL_URL";
+const token = "8521928941:AAEMEI3ZIy21wAXHZ7DAIVftc_wlELDUXTk";
+const admin = "6737930614";
+const DATABASE_URL = "https://anime-d7adb-default-rtdb.firebaseio.com/"; 
+const WEBHOOK_URL = "https://image-generator-bot-pied.vercel.app/";
 
 const bot = new TelegramBot(token, { webHook: { port: false } });
 const app = express();
 app.use(express.json());
-bot.setWebHook(WEBHOOK_URL);
+bot.setWebHook(WEBHOOK_URL );
 
 const broadcastSessions = {};
 
@@ -118,11 +118,11 @@ app.post("/", async (req, res) => {
       const caption =
         "*👆 Here Is Your Generated Image\n\n💭 Your Prompt:*\n`" +
         msg.text +
-        "`\n\n*🧑‍💻 Created By:* [BOTNAME](https://telegram.dog/BOT_USERNAME)";
+        "`\n\n*🧑‍💻 Created By:* [BOTNAME](https://telegram.dog/Anime_image_generator_bot)";
       const keyboard = {
         reply_markup: {
           inline_keyboard: [
-            [{ text: "🧑‍💻 Developer", url: "https://telegram.dog/DEVELOPER" }]
+            [{ text: "🧑‍💻 Developer", url: "https://telegram.dog/Ahsan_bai" }]
           ]
         },
         parse_mode: "Markdown",
